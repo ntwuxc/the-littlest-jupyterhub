@@ -254,7 +254,7 @@ def ensure_user_environment(user_requirements_txt_file):
         # Most people consider ipywidgets to be part of the core notebook experience
         'ipywidgets==7.4.2',
         # Pin tornado
-        'tornado<6.0'
+        'tornado==6.0'
     ])
 
     if user_requirements_txt_file:
