@@ -240,7 +240,8 @@ def ensure_user_environment(user_requirements_txt_file):
         'conda==4.5.8'
     ])
 
-    conda.ensure_pip_packages(USER_ENV_PREFIX, [
+    conda.ensure_pip_packages(USER_ENV_PREFIX, [])
+    '''
         # JupyterHub + notebook package are base requirements for user environment
         'jupyterhub==0.9.5',
         'notebook==5.7.7',
@@ -256,7 +257,7 @@ def ensure_user_environment(user_requirements_txt_file):
         # Pin tornado
         # 'tornado'
     ])
-
+'''
     if user_requirements_txt_file:
         # FIXME: This currently fails hard, should fail soft and not abort installer
         conda.ensure_pip_requirements(USER_ENV_PREFIX, user_requirements_txt_file)
