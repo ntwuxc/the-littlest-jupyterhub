@@ -240,24 +240,7 @@ def ensure_user_environment(user_requirements_txt_file):
         'conda==4.5.8'
     ])
 
-  '''  conda.ensure_pip_packages(USER_ENV_PREFIX, [])
-  
-        # JupyterHub + notebook package are base requirements for user environment
-        'jupyterhub==0.9.5',
-        'notebook==5.7.7',
-        # Install additional notebook frontends!
-        'jupyterlab==0.35.4',
-        'nteract-on-jupyter==2.0.7',
-        # nbgitpuller for easily pulling in Git repositories
-        'nbgitpuller==0.6.1',
-        # nbresuse to show people how much RAM they are using
-        'nbresuse==0.3.0',
-        # Most people consider ipywidgets to be part of the core notebook experience
-        'ipywidgets==7.4.2',
-        # Pin tornado
-        # 'tornado'
-    ])
-'''
+ 
     if user_requirements_txt_file:
         # FIXME: This currently fails hard, should fail soft and not abort installer
         conda.ensure_pip_requirements(USER_ENV_PREFIX, user_requirements_txt_file)
